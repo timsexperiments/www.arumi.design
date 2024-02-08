@@ -1,0 +1,31 @@
+<div class="nav-parent fixed bottom-0 h-40 z-10 w-full">
+  <nav
+    class="rounded-full flex gap-4 w-fit mx-auto bg-congress-50 transition-transform ease-linear outline outline-congress-400 px-6 py-3 translate-y-36">
+    <button
+      class="active transition-colors font-medium ease-in-out text-congress-900 hover:text-congress-950">
+      Home
+    </button>
+    <button
+      class="transition-colors ease-in-out font-medium text-congress-900 hover:text-congress-950">
+      About me
+    </button>
+    <button
+      class="transition-colors ease-in-out font-medium text-congress-900 hover:text-congress-950">
+      Projects
+    </button>
+    <button
+      class="transition-colors ease-in-out font-medium text-congress-900 hover:text-congress-950">
+      Contact
+    </button>
+  </nav>
+</div>
+
+<style>
+  .nav-parent:hover nav {
+    @apply translate-y-0;
+  }
+
+  .active {
+    @apply text-congress-950 font-bold italic;
+  }
+</style>
