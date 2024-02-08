@@ -3,6 +3,7 @@ title: 'Smart Scheduler Design'
 description: 'Lorem ipsum dolor sit amet'
 client: 'Sono Bello'
 order: 1
+role: 'Product Designer'
 categories: ['Product Design', 'UX Research']
 ---
 

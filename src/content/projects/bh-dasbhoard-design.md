@@ -3,6 +3,7 @@ title: 'Second post'
 description: 'Lorem ipsum dolor sit amet'
 order: 2
 client: 'Baker Hughes'
+role: 'UX Designer'
 categories: ['Product Design', 'UX Research']
 ---
 
