@@ -12,6 +12,7 @@ const projects = (await getCollection('projects')).sort(
   <div class="pl-16 w-full overflow-auto">
     <ul class="inline-flex gap-8 overflow-hidden">
       {projects.map((project) => <ProjectPreview project={project} />)}
+      <li class="w-8"></li>
     </ul>
   </div>
 </section>
