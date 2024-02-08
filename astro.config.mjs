@@ -10,5 +10,5 @@ export default defineConfig({
   site: 'https://arumi.design',
   integrations: [mdx(), sitemap(), tailwind(), icon()],
   output: 'hybrid',
-  adapter: cloudflare({ imageService: 'compile' }),
+  adapter: cloudflare({ imageService: 'cloudflare' }),
 });
