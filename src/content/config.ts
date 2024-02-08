@@ -10,6 +10,7 @@ const projects = defineCollection({
     order: z.number().int(),
     updatedDate: z.coerce.date().optional(),
     categories: z.string().array().min(1),
+    client: z.string().optional(),
   }),
 });
 

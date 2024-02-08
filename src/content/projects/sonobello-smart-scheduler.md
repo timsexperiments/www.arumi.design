@@ -1,6 +1,7 @@
 ---
-title: 'First post'
+title: 'Smart Scheduler Design'
 description: 'Lorem ipsum dolor sit amet'
+client: 'Sono Bello'
 order: 1
 categories: ['Product Design', 'UX Research']
 ---
