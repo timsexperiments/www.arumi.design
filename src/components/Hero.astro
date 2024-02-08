@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<section class="flex flex-col items-center relative pb-16">
+<section class="flex flex-col items-center relative pb-16" id="hero">
   <h1
     class="mb-20 text-7xl relative text-congress-950 font-display text-center">
     Designing with purpose,<br />
@@ -22,10 +22,12 @@ import { Icon } from 'astro-icon/components';
     So happy you are here!<br /><br />I am Arumi Choudhary,<br /> a Product Designer
     based in Austin, Texas
   </p>
-  <button
-    class="bg-congress-900 hover:bg-congress-950 transition-colors ease-in-out shadow-md text-autumn-50 px-4 rounded-lg py-2">
+  <buttons
+    class="bg-congress-900 hover:bg-congress-950 transition-colors ease-in-out shadow-md text-autumn-50 px-4 rounded-lg py-2"
+    data-nav-id="projects"
+    data-nav-set-active="projects-nav-item">
     View my work
-  </button>
+  </buttons>
 </section>
 
 <style>
