@@ -1,0 +1,17 @@
+---
+import { getCollection } from 'astro:content';
+import ProjectPreview from './projects/ProjectPreview.astro';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
+---
+
+<section class="px-16 py-16">
+  <h2 class="text-3xl font-display pb-12">Projects</h2>
+  <div>
+    <ul class="inline-flex gap-8 overflow-hidden">
+      {projects.map((project) => <ProjectPreview project={project} />)}
+    </ul>
+  </div>
+</section>
