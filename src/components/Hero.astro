@@ -1,5 +1,5 @@
 ---
-
+import { Icon } from 'astro-icon/components';
 ---
 
 <div class="flex flex-col items-center">
@@ -11,15 +11,19 @@
       impact
       <span class="impact">
         impact
-        <img class="w-full -translate-y-[3px] -z-20" src="/underline.svg" />
+        <Icon
+          class="w-full text-autumn-400 h-auto -translate-y-[3.25px] -z-20"
+          name="underline"
+        />
       </span>
     </span>
   </h1>
-  <p class="text-3xl text-center mb-12">
+  <p class="text-2xl text-center mb-12">
     So happy you are here!<br /><br />I am Arumi Choudhary,<br /> a Product Designer
     based in Austin, Texas
   </p>
-  <button class="bg-congress-900 text-almond-50 px-4 rounded-lg py-2">
+  <button
+    class="bg-congress-900 hover:bg-congress-950 transition-colors ease-in-out shadow-md text-almond-50 px-4 rounded-lg py-2">
     View my work
   </button>
 </div>
