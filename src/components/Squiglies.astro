@@ -1,22 +1,70 @@
 ---
 import { Icon } from 'astro-icon/components';
+
+type Props = {
+  hide?: (1 | 2 | 3)[];
+};
+
+let hide1 = '';
+let hide2 = '';
+let hide3 = '';
+
+const { hide } = Astro.props;
+
+if (hide?.includes(1)) {
+  hide1 = 'hidden';
+}
+if (hide?.includes(2)) {
+  hide2 = 'hidden';
+}
+if (hide?.includes(3)) {
+  hide3 = 'hidden';
+}
 ---
 
 <Icon
-  class="absolute -z-20 top-0 text-autumn-300 right-0 h-60 w-auto"
+  class:list={[
+    'absolute -z-20 top-0 text-autumn-300 right-0 h-60 w-auto',
+    hide1,
+  ]}
   color="text-autumn-300"
   name="squigly-1"
 />
 <Icon
-  class="absolute -z-20 top-[232px] text-autumn-200 right-8 w-24 h-auto"
+  class:list={[
+    'absolute -z-20 top-[232px] text-autumn-200 right-8 w-24 h-auto',
+    hide1,
+  ]}
   color="text-autumn-300"
   name="squigly-1-accent"
 />
 <Icon
-  class="absolute -z-20 top-72 text-autumn-200 w-60 left-0 h-auto"
+  class:list={[
+    'absolute -z-20 top-72 text-autumn-200 w-60 left-0 h-auto',
+    hide2,
+  ]}
   name="squigly-2"
 />
 <Icon
-  class="absolute -z-20 top-[534px] text-autumn-300 left-[102px] w-[92px] h-auto"
+  class:list={[
+    'absolute -z-20 top-[534px] text-autumn-300 left-[102px] w-[92px] h-auto',
+    hide2,
+  ]}
   name="squigly-2-accent"
+/>
+
+<Icon
+  class:list={[
+    'absolute -z-20 bottom-0 text-autumn-200 w-[324px] h-auto',
+    hide3,
+  ]}
+  name="squigly-3-accent"
+/>
+
+<Icon
+  class:list={[
+    'absolute -z-20 bottom-0 text-autumn-300 w-[448px] h-auto',
+    hide3,
+  ]}
+  name="squigly-3"
 />

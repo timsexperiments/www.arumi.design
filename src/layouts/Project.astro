@@ -15,10 +15,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body>
+  <body class="relative">
     <Header />
     <main>
-      <article>
+      <article class="prose">
         <div class="hero-image">
           {
             heroImage && (
