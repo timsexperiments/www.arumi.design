@@ -1,7 +1,29 @@
 ---
+import { Image } from 'astro:assets';
+import { type CollectionEntry } from 'astro:content';
+import { imagePreview } from '../../images';
 
+type Props = { project: CollectionEntry<'projects'> };
+
+const { project } = Astro.props;
 ---
 
-<li>
-  <h3>Project :)</h3>
+<li class="flex flex-col max-w-full w-[520px]">
+  <a href={`/projects/${project.slug}/`}>
+    <div class="bg-congress-50 rounded-2xl border border-congress-400">
+      <Image
+        class="bg-none"
+        src={imagePreview(project.slug)}
+        alt=""
+        width={600}
+        height={500}
+      />
+    </div>
+    <div>
+      <h3 class="font-bold text-xl">{project.data.title}</h3>
+      <p class="date">
+        {project.data.categories.join(', ')}
+      </p>
+    </div>
+  </a>
 </li>

@@ -9,6 +9,7 @@ const projects = defineCollection({
     // Transform string to Date object
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
+    categories: z.string().array().min(1),
   }),
 });
 
