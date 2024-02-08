@@ -8,7 +8,7 @@ type Props = { project: CollectionEntry<'projects'> };
 const { project } = Astro.props;
 ---
 
-<li class="max-w-full w-[520px]">
+<li class="md:max-w-full w-[520px] max-w-64">
   <a
     class="flex flex-col gap-2 hover:text-congress-950 group project-preview cursor-pointer"
     href={`/projects/${project.slug}/`}>
