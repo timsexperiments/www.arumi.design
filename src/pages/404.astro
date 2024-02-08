@@ -1,5 +1,28 @@
 ---
-
+import BaseHead from '../components/BaseHead.astro';
+import Squiglies from '../components/Squiglies.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
-404 :(
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="relative">
+    <main class="h-dvh w-screen flex flex-col gap-4 items-center pt-60">
+      <h1 class="font-display text-congress-950 text-5xl font-bold">
+        Feeling lost?
+      </h1>
+      <p class="font-medium tracking-wide text-congress-800 text-xl">
+        Don't worry, we'll get you back on track.
+      </p>
+      <a
+        class="hover:bg-congress-950 rounded-md text-sm px-4 py-2 bg-congress-900 text-autumn-50"
+        href="/">
+        Find you way back
+      </a>
+    </main>
+    <Squiglies hide={[2]} />
+  </body>
+</html>
