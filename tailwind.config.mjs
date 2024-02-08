@@ -23,6 +23,9 @@ export default {
       ],
     },
     extend: {
+      'pointer-events-all': {
+        pointer,
+      },
       colors: {
         congress: {
           50: '#edf9ff',

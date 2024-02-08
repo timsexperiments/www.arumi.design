@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  @apply scroll-smooth bg-autumn-50 font-serif text-congress-900;
+  @apply w-screen scroll-smooth bg-autumn-50 font-serif text-congress-900;
 }
