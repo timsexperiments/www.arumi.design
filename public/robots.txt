@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arumi.design/sitemap-index.xml
