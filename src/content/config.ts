@@ -7,7 +7,7 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     // Transform string to Date object
-    pubDate: z.coerce.date(),
+    order: z.number().int(),
     updatedDate: z.coerce.date().optional(),
     categories: z.string().array().min(1),
   }),

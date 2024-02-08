@@ -8,16 +8,23 @@ type Props = { project: CollectionEntry<'projects'> };
 const { project } = Astro.props;
 ---
 
-<li class="flex flex-col max-w-full w-[520px]">
-  <a href={`/projects/${project.slug}/`}>
-    <div class="bg-congress-50 rounded-2xl border border-congress-400">
+<li class="max-w-full w-[520px]">
+  <a
+    class="flex flex-col gap-2 hover:text-congress-950 group project-preview cursor-pointer"
+    href={`/projects/${project.slug}/`}>
+    <div
+      class="overflow-clip bg-congress-50 relative rounded-2xl border border-congress-400">
       <Image
         class="bg-none"
         src={imagePreview(project.slug)}
         alt=""
+        format="webp"
         width={600}
         height={500}
       />
+      <div
+        class="overlay absolute transition-colors group-hover:bg-congress-950/20 ease-linear top-0 bottom-0 left-0 right-0">
+      </div>
     </div>
     <div>
       <h3 class="font-bold text-xl">{project.data.title}</h3>
