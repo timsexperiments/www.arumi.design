@@ -4,11 +4,17 @@ import { Image } from 'astro:assets';
 import headshot from '../assets/headshot.png';
 ---
 
-<section class="px-16 py-20">
-  <h1 class="text-3xl font-display pb-4">About Me</h1>
+<section class="px-16 py-32">
+  <h2 class="text-3xl font-display pb-4">About Me</h2>
   <div class="flex justify-between">
     <div class="relative px-9 py-6">
-      <Image src={headshot} width="393" height="391" alt="Arumi headshot" />
+      <Image
+        src={headshot}
+        width="393"
+        height="391"
+        alt="Arumi headshot"
+        format="webp"
+      />
       <Icon class="absolute top-0 left-0 w-full h-auto" name="bubbles" />
     </div>
     <div class="flex flex-col gap-6 w-1/2">
