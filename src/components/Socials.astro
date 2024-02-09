@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+import { INSTAGRAM_URL, LINKEDIN_URL, TIKTOK_URL } from '../consts';
+
+interface Props extends HTMLAttributes<'div'> {}
+
+const props = Astro.props;
+---
+
+<div {...props}>
+  <a
+    class="hover:text-congress-950 transition-colors ease-in-out inline-block"
+    href={LINKEDIN_URL}
+    target="_blank">
+    <Icon name="linkedin" />
+  </a>
+  <a
+    class="hover:text-congress-950 transition-colors ease-in-out inline-block"
+    href={INSTAGRAM_URL}
+    target="_blank">
+    <Icon name="instagram" />
+  </a>
+  <a
+    class="hover:text-congress-950 transition-colors ease-in-out inline-block"
+    href={TIKTOK_URL}
+    target="_blank">
+    <Icon name="tiktok" />
+  </a>
+</div>
