@@ -1,0 +1,30 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<div class="my-16">
+  <h1>
+    My
+    <span class="relative">
+      impact
+      <span class="impact">
+        impact
+        <Icon
+          class="-z-20 h-auto w-full -translate-y-[3.25px] !stroke-[3px] text-autumn-400"
+          name="underline"
+        />
+      </span>
+    </span>
+  </h1>
+
+  <slot />
+</div>
+
+<style>
+  .impact {
+    @apply absolute left-[1.5px] -z-10;
+    -webkit-text-fill-color: #fcf7f0;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: currentColor;
+  }
+</style>
