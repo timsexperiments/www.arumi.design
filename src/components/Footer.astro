@@ -1,7 +1,12 @@
 ---
+import Socials from './Socials.astro';
+
 const today = new Date();
 ---
 
-<footer class="px-16 py-8 w-full">
-  &copy; {today.getFullYear()} Arumi Designs.
+<footer class="px-16 py-8 w-full flex justify-between">
+  <span>
+    &copy; {today.getFullYear()} Arumi Designs.
+  </span>
+  <Socials class="flex gap-4" />
 </footer>

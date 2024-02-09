@@ -1,28 +1,15 @@
 ---
 import { Icon } from 'astro-icon/components';
+import Socials from './Socials.astro';
 ---
 
 <header class="px-16 py-8 w-full" id="home">
   <nav class="flex justify-center relative">
-    <div class="flex flex-col sm:flex-row gap-4 absolute top-0 left-0">
-      <a
-        class="hover:text-congress-950 transition-colors ease-in-out inline-block"
-        href="https://www.linkedin.com/in/arumi-choudhary/">
-        <Icon name="linkedin" />
-      </a>
-      <a
-        class="hover:text-congress-950 transition-colors ease-in-out inline-block"
-        href="https://www.instagram.com/designsbyarumi/">
-        <Icon name="instagram" />
-      </a>
-      <a
-        class="hover:text-congress-950 transition-colors ease-in-out inline-block"
-        href="https://www.tiktok.com/@designsbyarumi/">
-        <Icon name="tiktok" />
-      </a>
-    </div>
+    <Socials class="hidden md:flex gap-4 absolute top-0 left-0" />
     <div>
-      <Icon class="text-7xl" name="arumi.design-logo" />
+      <a href="/">
+        <Icon class="text-7xl" name="arumi.design-logo" />
+      </a>
     </div>
   </nav>
 </header>
