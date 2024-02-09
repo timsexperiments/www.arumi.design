@@ -1,0 +1,161 @@
+---
+title: 'Smart Scheduler Design'
+description: 'Lorem ipsum dolor sit amet'
+client: 'Sono Bello'
+order: 1
+role: 'Product Designer'
+categories: ['Product Design', 'UX Research']
+---
+
+import sonobelloBookingRulesPng from '@assets/sonobello/booking-rules.png';
+import sonobelloMoodboardPng from '@assets/sonobello/moodboard.png';
+import sonobelloTtaPng from '@assets/sonobello/tta.png';
+import sonobelloUserInterviewPng from '@assets/sonobello/user-interview-and-journey-map.png';
+import sonobelloUserPersonaPng from '@assets/sonobello/user-persona.png';
+import Board from '@md/Board.astro';
+import LeftHeader from '@md/LeftHeader.astro';
+import LeftRight from '@md/LeftRight.astro';
+import MyImpact from '@md/MyImpact.astro';
+import { Image } from 'astro:assets';
+
+<LeftHeader header="Project Overview">
+  Conceptualization & design of the Smart Scheduler application, tailored for
+  Sono Bello, a prominent plastic surgery clinic. This application serves as an
+  innovative solution to streamline the clinic's administrative processes,
+  seamlessly integrating with their existing online booking platform.
+</LeftHeader>
+
+<LeftHeader header="Challenge">
+  Sono Bello's appointment scheduling currently depends on **manual methods**
+  and direct patient interactions via live chat or phone, without an efficient
+  online system during business hours. This results in **operational
+  inefficiencies**, as the Patient Advisory Consultant (PAC) team manually
+  gathers patient data and schedules appointments based on zip codes and
+  preferences. The existing system also categorizes patients by lead quality
+  (green, yellow, red), but this isn't effectively integrated into scheduling,
+  causing **potential misallocations** and **inconsistent patient experiences**.
+</LeftHeader>
+
+<LeftHeader header="Proposed Solution">
+  The Smart Scheduler app is designed to revolutionize this process by providing
+  a comprehensive, automated scheduling platform for corporate admins. It
+  enables the creation of company-wide templates for various operational
+  aspects. The app facilitates optimized Patient Care Consultant (PCC)
+  assignments and streamlined center configurations, ***significantly
+  enhancing*** the efficiency of Sono Bello's scheduling system and ensuring a
+  more consistent and satisfactory patient experience.
+</LeftHeader>
+
+<LeftHeader header="Impact">
+  The creation of user personas and journey maps, based on data from over 100
+  user interviews and 30 stakeholder meetings, provided insights into user
+  experiences, shaping the app's intuitive interface and functionality. My
+  efforts led to a 40% increase in operational efficiency and a 25% improvement
+  in user satisfaction, significantly impacting the app's development from
+  initial wireframes to high-fidelity designs, and surpassing Sono Bello's
+  operational and user experience objectives.
+</LeftHeader>
+
+---
+
+## Let’s explore the insights
+
+<LeftRight align="middle">
+    ### Moodboard Concepts & Selection
+
+    The research phase began with the development of three distinct moodboard concepts, adhering to Sono Bello's branding guidelines. These moodboards served as visual brainstorming tools, each proposing a different design vision for the Smart Scheduler app. The chosen concept, "Orange Midnight Fusion," stood out for its lively and engaging aesthetic, aligning with Sono Bello's brand essence.
+
+    <Image
+        slot="right"
+        class="w-full h-auto"
+        format="webp"
+        src={sonobelloMoodboardPng}
+        alt="Sonobello Moodboard" />
+
+</LeftRight>
+
+<LeftRight top="right" align="middle">
+    <Image
+        class="w-full h-auto"
+        align="middle"
+        format="webp"
+        src={sonobelloUserInterviewPng}
+        alt="Sonobello User Interview and Journey Map" />
+
+    <div slot="right">
+        ### User Interviews and User Journey Map
+
+        To gain deeper insights, user interviews were conducted, focusing on understanding the user's needs, behaviors, and pain points. This qualitative research culminated in the creation of a User Journey Map which tracked the user's interactions and steps within the scheduling process, from initial contact to appointment completion, encompassing phases like Lead Interest, Scheduling the Lead, Optimizing the Schedule, and Attendance & Future Booking.
+    </div>
+
+</LeftRight>
+
+<Board>
+
+    <LeftRight rightText="left" leftWidth="3/5" rightWidth="2/5" noSpacing>
+        <div>
+            <div class="flex items-top gap-2">
+                <Image format="webp" class="h-32 w-32 my-2 inline-block" src={sonobelloUserPersonaPng} alt="User persona"/>
+
+                Christina is the proud mom of 2 kids. She's married, in her late 40s, and has been working for Sono Bello for the past 10 years. She's risen through the ranks up to VP of Centers. She loves her job and wants to have a positive impact in the company.
+            </div>
+            <p class="">Goals / Objectives</p>
+
+            - Minimize PCs and PCAs downtime by avoiding patient No Shows
+            - View performance of Smart Scheduler (Conversion Rate from Appt. to Consult) for decision making
+            - Configure and calibrate the Smart Scheduler's parameters to optimize consultations
+            - Create and Save templates with different
+        </div>
+        <div slot="right">
+            Influences
+
+            - Her performance in the company is linked to multiple centers' productivity
+            - She does not have a technical background, so she needs simple and intuitive UI UX
+
+            Pain Points
+
+            - Unable to edit scheduling booking rules at Center Level
+            - Can not track conversion rate from appt. to consult
+            - Needs to manage multiple centers with same scheduling booking rules
+            - Needs to save template for every variation of booking rules
+
+        </div>
+    </LeftRight>
+
+</Board>
+
+## New designs, new features
+
+The Smart Scheduler app, inspired by extensive research is designed to optimize Sono Bello's administrative and scheduling processes. This solution focuses on enhancing user experience with an intuitive UI, particularly for Corporate Admins, and dives deep into specific features that streamline day-to-day operations.
+
+### User-Friendly UI for Propensity-Based Availability
+
+The UI is crafted to be intuitive and easy to navigate, particularly catering to the needs of users with a non-technical background. It integrates real-time data and propensity models, allowing for dynamic adjustments in appointment scheduling, ensuring that users can easily configure and monitor the system.
+
+### Booking Rules
+
+The Booking Rules feature allows admins to create and manage templates based on lead quality, time, and day. This feature includes:
+
+- The ability to set distinct time ranges for different lead quality categories.
+- Options to filter available slots for each group based on specified intervals and days.
+- A user-friendly interface for modifying and applying these rules across multiple centers.
+
+This functionality ensures that the appointment scheduling process is both efficient and tailored to the specific needs of each lead category, optimizing resource allocation and enhancing the overall scheduling process.
+
+<Image format="webp" class="m-auto shadow-lg" src={sonobelloBookingRulesPng} alt="User persona"/>
+
+### Template Library
+
+The Template Libraries serve as a crucial repository within the app, designed for:
+
+- Easy creation, viewing, and editing of templates.
+- Swift application of these templates to different centers.
+- Organizing and storing various configurations for quick access and modification.
+
+This feature is particularly useful for managing consistent scheduling practices across multiple centers, allowing Corporate Admins to efficiently implement standardized processes while retaining the flexibility to customize as needed.
+
+<Image format="webp" class="m-auto shadow-lg" src={sonobelloTtaPng} alt="User persona"/>
+
+<MyImpact>
+    In the development of the Smart Scheduler app for Sono Bello, my role was integral in bridging the gap between technical innovation and user-centric design. I led the conceptualization and design of the app, ensuring that every feature aligned with the specific needs and challenges identified through extensive research and stakeholder engagement. My efforts in creating user personas and journey maps provided a deep understanding of the user's experience, directly influencing the app's intuitive interface and functionality. Furthermore, my involvement in the moodboard creation and selection process ensured that the app's visual design resonated with Sono Bello's brand identity. My contribution significantly shaped the app's development, from initial wireframes to high-fidelity designs, leading to a solution that not only meets but exceeds the operational and user experience goals set by Sono Bello.
+</MyImpact>
