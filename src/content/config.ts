@@ -8,7 +8,6 @@ const projects = defineCollection({
     description: z.string(),
     // Transform string to Date object
     order: z.number().int(),
-    updatedDate: z.coerce.date().optional(),
     categories: z.string().array().min(1),
     client: z.string().optional(),
     role: z.string(),

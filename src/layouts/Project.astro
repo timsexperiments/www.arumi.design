@@ -1,13 +1,15 @@
 ---
+import BaseHead from '@components/BaseHead.astro';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
+import Squiglies from '@components/Squiglies.astro';
+import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
+import { imageHero } from '../images';
 
-type Props = CollectionEntry<'projects'>['data'];
+type Props = CollectionEntry<'projects'>['data'] & { slug: string };
 
-const { title, description, updatedDate } = Astro.props;
+const { title, description, role, client, slug } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,28 +19,28 @@ const { title, description, updatedDate } = Astro.props;
 
   <body class="relative">
     <Header />
-    <main>
-      <article class="prose">
-        <div class="hero-image"></div>
-        <div class="prose">
-          <div class="title">
-            <div class="date">
-              <FormattedDate date={new Date()} />
-              {
-                updatedDate && (
-                  <div class="last-updated-on">
-                    Last updated on <FormattedDate date={updatedDate} />
-                  </div>
-                )
-              }
-            </div>
-            <h1>{title}</h1>
-            <hr />
-          </div>
-          <slot />
-        </div>
+    <main class="w-full px-32">
+      <h1 class="text-congress-950 font-extrabold text-5xl mb-2">{title}</h1>
+      <div class="space-x-2 text-xl font-medium mb-6">
+        <span>
+          {role}
+        </span>
+        <span>|</span>
+        <span>
+          {client}
+        </span>
+      </div>
+      <Image class="mb-20 mt-16" src={imageHero(slug)} alt={title} />
+      <article class="prose prose-custom w-full max-w-full">
+        <slot />
       </article>
     </main>
     <Footer />
+    <Squiglies />
+    <style is:global>
+      .prose-custom {
+        @apply prose-headings:text-congress-950 prose-p:text-congress-900 prose-strong:text-congress-900 prose-ul:text-congress-900 prose-li:my-0 prose-li:marker:text-congress-900 prose-hr:my-16 prose-hr:border-t-2 prose-hr:border-congress-950 md:prose-h2:text-3xl;
+      }
+    </style>
   </body>
 </html>
