@@ -1,0 +1,26 @@
+---
+type Props = {
+  header: string;
+  subHeading?: string;
+};
+
+const { header, subHeading } = Astro.props;
+---
+
+<div class="flex my-4 flex-col md:flex-row md:gap-2">
+  <div class="md:w-1/2">
+    <h2 class="text-congress-950 font-bold mt-5">
+      {header}
+    </h2>
+    <p>{subHeading}</p>
+  </div>
+  <div class="md:w-1/2">
+    <slot />
+  </div>
+</div>
+
+<style>
+  h2 {
+    @apply md:text-2xl !important;
+  }
+</style>

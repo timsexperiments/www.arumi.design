@@ -1,0 +1,56 @@
+---
+import {
+  Width,
+  textAlignmentCss,
+  type TextAlignment,
+  type VerticalAlignment,
+} from './types';
+
+type Props = {
+  first?: 'left' | 'right';
+  align?: VerticalAlignment;
+  leftText?: TextAlignment;
+  rightText?: TextAlignment;
+  leftWidth?: Width;
+  rightWidth?: Width;
+  noSpacing?: true;
+};
+
+const {
+  first = 'left',
+  align = 'top',
+  leftText = 'left',
+  rightText = 'right',
+  rightWidth = '1/2',
+  leftWidth = '1/2',
+  noSpacing = false,
+} = Astro.props;
+
+let alignCss = 'items-start';
+if (align === 'middle') {
+  alignCss = 'items-center';
+}
+if (align === 'bottom') {
+  alignCss = 'items-end';
+}
+
+const leftTextCss = textAlignmentCss(leftText);
+const rightTextCss = textAlignmentCss(rightText);
+const leftWidthCss = `md:w-${leftWidth}`;
+const rightWidthCss = `md:w-${rightWidth}`;
+---
+
+<div
+  class:list={[
+    'w-full flex md:flex-row md:justify-between gap-4',
+    first === 'left' ? 'flex-col' : 'flex-col-reverse',
+    alignCss,
+    noSpacing ? '' : 'my-16',
+  ]}>
+  <div class:list={['w-full md:w-1/2', leftTextCss, leftWidthCss]}>
+    <slot />
+  </div>
+  <div class:list={['w-full md:w-1/2', rightTextCss, rightWidth]}>
+    <slot name="right" />
+  </div>
+</div>
