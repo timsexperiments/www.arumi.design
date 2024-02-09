@@ -7,9 +7,9 @@ const projects = (await getCollection('projects')).sort(
 );
 ---
 
-<section class="py-16 w-full overflow-hidden" id="projects">
-  <h2 class="px-4 sm:px-16 text-3xl font-display pb-12">Projects</h2>
-  <div class="pl-4 sm:ml-16 w-full overflow-auto">
+<section class="w-full overflow-hidden py-16" id="projects">
+  <h2 class="px-4 pb-12 font-display text-3xl sm:px-16">Projects</h2>
+  <div class="w-full overflow-auto pl-4 sm:ml-16">
     <ul class="inline-flex gap-8">
       {projects.map((project) => <ProjectPreview project={project} />)}
       <li class="w-8 sm:w-24"></li>

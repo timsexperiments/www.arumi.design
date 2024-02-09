@@ -8,12 +8,12 @@ type Props = { project: CollectionEntry<'projects'> };
 const { project } = Astro.props;
 ---
 
-<li class="md:max-w-full w-[520px] max-w-64">
+<li class="w-[520px] max-w-64 md:max-w-full">
   <a
-    class="flex flex-col gap-2 hover:text-congress-950 group project-preview cursor-pointer"
+    class="project-preview group flex cursor-pointer flex-col gap-2 hover:text-congress-950"
     href={`/projects/${project.slug}/`}>
     <div
-      class="overflow-clip bg-congress-50 relative rounded-2xl border border-congress-400">
+      class="relative overflow-clip rounded-2xl border border-congress-400 bg-congress-50">
       <Image
         class="bg-none"
         src={imagePreview(project.slug)}
@@ -23,14 +23,12 @@ const { project } = Astro.props;
         height={500}
       />
       <div
-        class="overlay absolute transition-colors group-hover:bg-congress-950/20 ease-linear top-0 bottom-0 left-0 right-0">
+        class="overlay absolute bottom-0 left-0 right-0 top-0 transition-colors ease-linear group-hover:bg-congress-950/20">
       </div>
     </div>
     <div>
-      <h3 class="font-bold text-xl">{project.data.title}</h3>
-      <p class="date">
-        {project.data.categories.join(', ')}
-      </p>
+      <h3 class="text-xl font-bold">{project.data.title}</h3>
+      <p class="date">{project.data.categories.join(', ')}</p>
     </div>
   </a>
 </li>

@@ -1,12 +1,12 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { LINKEDIN_URL } from '../consts';
+import { LINKEDIN_URL } from 'src/consts';
 ---
 
 <section
-  class="text-center w-full flex flex-col gap-12 items-center px-4 sm:px-16 py-16"
+  class="flex w-full flex-col items-center gap-12 px-4 py-16 text-center sm:px-16"
   id="contact">
-  <h2 class="text-5xl font-display font-bold max-w-lg">
+  <h2 class="max-w-lg font-display text-5xl font-bold">
     Have an exciting opportunity?
   </h2>
   <p class="max-w-xl text-lg">
@@ -15,16 +15,16 @@ import { LINKEDIN_URL } from '../consts';
     perspective and skill set, I'd love to hear about it. Interested in
     collaborating? I'm just an email away.
   </p>
-  <div class="space-x-4 mb-8">
+  <div class="mb-8 space-x-4">
     <button
-      class="inline-flex hover:bg-congress-950 items-center justify-center px-4 py-2 rounded bg-congress-900 text-autumn-50">
+      class="inline-flex items-center justify-center rounded bg-congress-900 px-4 py-2 text-autumn-50 hover:bg-congress-950">
       <Icon class="h-5 w-5" name="mail" />
     </button>
     <a
-      class="inline-flex cursor-pointer hover:bg-congress-950 items-center justify-center px-4 py-2 rounded bg-congress-900 text-autumn-50"
+      class="inline-flex cursor-pointer items-center justify-center rounded bg-congress-900 px-4 py-2 text-autumn-50 hover:bg-congress-950"
       href={LINKEDIN_URL}
       target="_blank">
-      <Icon class="h-5 w-5 inline" name="linkedin" />
+      <Icon class="inline h-5 w-5" name="linkedin" />
     </a>
   </div>
 </section>

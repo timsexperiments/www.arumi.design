@@ -7,12 +7,14 @@ type Props = {
 const { header, subHeading } = Astro.props;
 ---
 
-<div class="flex my-4 flex-col md:flex-row md:gap-2">
+<div class="my-4 flex flex-col md:flex-row md:gap-2">
   <div class="md:w-1/2">
-    <h2 class="text-congress-950 font-bold mt-5">
+    <h2 class="mt-5 font-bold text-congress-950">
       {header}
     </h2>
-    <p>{subHeading}</p>
+    <p>
+      {subHeading}
+    </p>
   </div>
   <div class="md:w-1/2">
     <slot />

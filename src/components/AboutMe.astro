@@ -4,10 +4,10 @@ import { Image } from 'astro:assets';
 import headshot from '../assets/headshot.png';
 ---
 
-<section class="px-4 sm:px-16 py-16 w-full" id="about-me">
-  <h2 class="text-3xl font-display pb-4">About Me</h2>
-  <div class="flex flex-col md:flex-row gap-6 justify-between">
-    <div class="relative px-9 py-6 w-full md:w-1/2">
+<section class="w-full px-4 py-16 sm:px-16" id="about-me">
+  <h2 class="pb-4 font-display text-3xl">About Me</h2>
+  <div class="flex flex-col justify-between gap-6 md:flex-row">
+    <div class="relative w-full px-9 py-6 md:w-1/2">
       <Image
         class="w-full"
         src={headshot}
@@ -16,9 +16,9 @@ import headshot from '../assets/headshot.png';
         alt="Arumi headshot"
         format="webp"
       />
-      <Icon class="absolute top-0 left-0 w-full h-auto" name="bubbles" />
+      <Icon class="absolute left-0 top-0 h-auto w-full" name="bubbles" />
     </div>
-    <div class="flex flex-col text-lg gap-6 w-full md:w-1/2">
+    <div class="flex w-full flex-col gap-6 text-lg md:w-1/2">
       <p>
         🌟 Hi there! I'm Arumi, a vibrant soul with a lifelong flair for
         creativity. From doodling in my childhood to diving headfirst into the
