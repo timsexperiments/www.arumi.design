@@ -7,14 +7,14 @@ role: 'UX Designer'
 categories: ['Product Design', 'UX Research']
 ---
 
-import bhDashboardHeuristicPng from '@assets/bh-dashboard/heuristic-evaluation.png';
-import bhDashboardGoogleAnalyticsPng from '@assets/bh-dashboard/google-analytics.png';
-import bhDashboardKpisPng from '@assets/bh-dashboard/kpis.png';
 import bhDashboardDashboardImagePng from '@assets/bh-dashboard/dashboard-image.png';
+import bhDashboardGoogleAnalyticsPng from '@assets/bh-dashboard/google-analytics.png';
+import bhDashboardHeuristicPng from '@assets/bh-dashboard/heuristic-evaluation.png';
+import bhDashboardKpisPng from '@assets/bh-dashboard/kpis.png';
 import LeftHeader from '@md/LeftHeader.astro';
 import LeftRight from '@md/LeftRight.astro';
 import MyImpact from '@md/MyImpact.astro';
-import {Image} from 'astro:assets'
+import { Image } from 'astro:assets';
 
 <LeftHeader header="Project Overview">
   engageSubsea is a leading digital platform for offshore oil and gas
@@ -65,6 +65,7 @@ import {Image} from 'astro:assets'
         format="webp"
         src={bhDashboardHeuristicPng}
         alt="Heuristic evaluation" />
+
 </LeftRight>
 
 <LeftRight align="middle" first="right">
@@ -72,12 +73,13 @@ import {Image} from 'astro:assets'
         class="max-w-full h-auto w-auto"
         format="webp"
         src={bhDashboardGoogleAnalyticsPng}
-        alt="Heuristic evaluation" />
+        alt="Dashboard analytics" />
     <div slot="right">
         ### User Research with Google Analytics
 
         Utilizing the available Google Analytics report, an in-depth examination of user behavior and interactions within the engageSubsea platform was performed. By studying metrics such as module usage, event frequency, and navigation paths, valuable insights were gained regarding user preferences and priorities. These insights helped shape the design decisions for the post-login page or dashboard, ensuring that the most relevant and commonly accessed information was prominently featured.
     </div>
+
 </LeftRight>
 
 <LeftRight align="middle">
@@ -90,9 +92,9 @@ import {Image} from 'astro:assets'
         class="max-w-full h-auto w-auto"
         format="webp"
         src={bhDashboardKpisPng}
-        alt="Heuristic evaluation" />
-</LeftRight>
+        alt="KPIs" />
 
+</LeftRight>
 
 ## Design Achievements & Milestones
 
@@ -108,10 +110,11 @@ import {Image} from 'astro:assets'
 <div class="my-32"></div>
 
 <Image
-    class="max-w-full m-auto max-h-dvh w-auto h-auto"
-    format="webp"
-    src={bhDashboardDashboardImagePng}
-    alt="Heuristic evaluation" />
+  class="m-auto h-auto max-h-dvh w-auto max-w-full shadow-lg"
+  format="webp"
+  src={bhDashboardDashboardImagePng}
+  alt="Dashboard mocks"
+/>
 
 <MyImpact>
     As the Lead UX Designer, my contributions to the redesigned post-login dashboard for engageSubsea were substantial. By synthesizing user research and the product team's requirements, I created a design solution that revolutionized equipment and operations management for offshore oil and gas operators.
@@ -119,4 +122,5 @@ import {Image} from 'astro:assets'
     The dashboard's implementation brought significant benefits, including streamlined troubleshooting, efficient work order tracking, and effective equipment inventory management. Moreover, the comprehensive insights into installed base, operations excellence, managed assets, and financials empowered users to make data-driven decisions, leading to increased productivity, enhanced safety measures, and substantial operational cost savings.
 
     Ultimately, my role as the Lead UX Designer contributed to the overall success of engageSubsea by delivering a user-centric and visually impactful post-login dashboard that optimized safety, productivity, and cost-effectiveness, reinforcing engageSubsea's position as a leading digital platform for offshore oil and gas operations.
+
 </MyImpact>
