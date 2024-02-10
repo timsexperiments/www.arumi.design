@@ -7,6 +7,14 @@ role: 'UX Designer'
 categories: ['Product Design']
 ---
 
+import competitiveAuditPng from '@assets/tims-experiments/competitive-audit.png';
+import moodBoardPng from '@assets/tims-experiments/mood-board.png';
+import LeftHeader from '@md/LeftHeader.astro';
+import LeftRight from '@md/LeftRight.astro';
+import MyImpact from '@md/MyImpact.astro';
+import ProtoTypePreview from '@md/PrototypePreview.astro';
+import { Image } from 'astro:assets';
+
 <LeftHeader header="Project Overview">
   "Tim's Experiments" represents a distinctive project by an independent tech
   enthusiast and blogger. This website stands as a dynamic platform, showcasing
@@ -45,3 +53,65 @@ categories: ['Product Design']
 </LeftHeader>
 
 ---
+
+## Let's explore the insights
+
+<LeftRight align="middle">
+  ### Comparative Competitive Audit
+
+Recognizing the importance of context and competition, I conducted a thorough Competitive Audit This involved studying similar business models and competitors to understand the market landscape. The goal was to identify trends, best practices, and gaps in the current market offerings, which could be leveraged to create a distinctive and competitive design. By analyzing how independent bloggers vs consulting firms showcase their sites, I gained insights into effective design elements, content strategies, and user engagement tactics. This comprehensive understanding allowed me to strategize a design that was not only user-centric but also stood out in the competitive field of tech blogging.
+
+  <Image slot="right" src={competitiveAuditPng} format="webp" alt="Competitive Audit" />
+</LeftRight>
+
+<LeftRight align="middle" first="right">
+  <Image
+    class="max-w-full h-auto w-auto"
+    format="webp"
+    src={moodBoardPng}
+    alt="Mood board" />
+
+  <div slot="right">
+    ### Moodboard Concepts & Selection
+
+    In the moodboarding phase, I used insights from the competitive audit to shape my visual direction, opting for a dark mode concept for its modern appeal and popularity in tech. The chosen style and color palette were designed to resonate with my target audience and stand out in the market. I also prioritized accessibility, ensuring the design was user-friendly for all. The final moodboards, refined with collaborative feedback, merged these insights into a cohesive visual language, highlighting my commitment to blending market research, user preferences, and accessibility in my design approach.
+
+  </div>
+</LeftRight>
+
+## Enhancing Engagement
+
+In elevating the website's design, I introduced a specialized section called "The Lab," where users can explore articles on various software engineering topics. This addition was a direct response to the competitive audit and moodboard insights, aiming to offer unique value and engage a more technically inclined audience. "The Lab" serves as a knowledge hub, aligning with the dark mode aesthetic and user-centric design principles established in the moodboarding phase.
+
+Furthermore, I integrated a complimentary membership service, "Become Part of the Discovery," to deepen user engagement. This feature, inspired by trends and gaps identified in the competitive analysis, allows users to immerse themselves more fully in the content and community. It reflects a strategic blend of the insights from the competitive audit and the visual direction set by the moodboards, enhancing the website's appeal and functionality while maintaining accessibility and user-friendliness.
+
+<div class="my-8"></div>
+
+**Explore the website's full scope with my interactive prototype and witness the user-centric
+design & functionality firsthand 👇**
+
+<ProtoTypePreview
+  class="mb-16"
+  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FdUc5it2HDgJwOXrpOaG7V5%2FTim's-Experiments-UI%3Fpage-id%3D5%253A17749%26type%3Ddesign%26node-id%3D238-969%26viewport%3D111%252C-2768%252C0.19%26t%3DSEeThiAQRqX1QvtU-1%26scaling%3Dscale-down%26starting-point-node-id%3D238%253A969%26mode%3Ddesign"
+/>
+
+<MyImpact>
+  <p>
+    In my role as Product Designer for "Tim's Experiments," I played a crucial
+    role in elevating the website into a more intuitive and engaging platform.
+    My journey began with an in-depth competitive analysis, which informed the
+    creation of moodboards that set the stage for a visually appealing and
+    accessible design.
+  </p>
+  <p>
+    A key achievement was the introduction of "The Lab," a section dedicated to
+    in-depth software engineering content, thoughtfully crafted to appeal to
+    both casual browsers and tech enthusiasts. Additionally, the integration of
+    the 'Become Part of the Discovery' membership service significantly boosted
+    user engagement, creating a sense of community and ongoing interaction. My
+    commitment to user-centric design principles throughout the project not only
+    enhanced the overall user experience but also solidified "Tim's Experiments"
+    as a distinctive and valuable resource in the tech blogging and educational
+    landscape.
+  </p>
+</MyImpact>
