@@ -1,3 +1,5 @@
+import plugin from 'tailwindcss/plugin';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -53,5 +55,22 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('tailwindcss-animate'),
+    plugin(({ matchUtilities, theme }) => {
+      console.log(theme('transitionDelay'));
+      matchUtilities(
+        {
+          'transition-delay': (value) => ({
+            'transition-delay': value,
+          }),
+          'animation-delay': (value) => ({
+            'animation-delay': value,
+          }),
+        },
+        { values: theme('transitionDelay') },
+      );
+    }),
+  ],
 };

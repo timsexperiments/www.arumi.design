@@ -6,16 +6,22 @@ import { LINKEDIN_URL } from 'src/consts';
 <section
   class="flex w-full flex-col items-center gap-12 px-4 py-16 text-center sm:px-16"
   id="contact">
-  <h2 class="max-w-lg font-display text-4xl md:text-5xl font-bold">
+  <h2
+    class="max-w-lg font-display opacity-0 translate-y-[200%] text-4xl md:text-5xl font-bold"
+    data-animate-in>
     Have an exciting opportunity?
   </h2>
-  <p class="max-w-xl text-base lg:text-lg">
+  <p
+    class="max-w-xl text-base lg:text-lg opacity-0 translate-y-full delay-150"
+    data-animate-in>
     I'm always interested in hearing about exciting projects. If you're working
     on a project that could benefit from my expertise or requires a unique
     perspective and skill set, I'd love to hear about it. Interested in
     collaborating? I'm just an email away.
   </p>
-  <div class="mb-8 space-x-4">
+  <div
+    class="mb-8 space-x-4 opacity-0 translate-y-[200%] delay-300"
+    data-animate-in>
     <button
       class="inline-flex items-center justify-center rounded bg-congress-900 px-4 py-2 text-autumn-50 hover:bg-congress-950">
       <Icon class="h-5 w-5" name="mail" />
