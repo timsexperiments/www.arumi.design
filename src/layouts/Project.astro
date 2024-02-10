@@ -30,7 +30,7 @@ const { title, description, role, client, slug } = Astro.props;
           {client}
         </span>
       </div>
-      <Image class="mb-20 mt-16" src={imageHero(slug)} alt={title} />
+      <Image class="mb-20 mt-16 mx-auto" src={imageHero(slug)} alt={title} />
       <article class="prose prose-custom w-full max-w-full">
         <slot />
       </article>
