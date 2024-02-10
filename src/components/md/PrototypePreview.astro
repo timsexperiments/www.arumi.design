@@ -1,0 +1,34 @@
+---
+import computerStem from '@assets/computer-stem.png';
+import { Icon } from 'astro-icon/components';
+import type { HTMLAttributes } from 'astro/types';
+import { Image } from 'astro:assets';
+
+interface Props extends HTMLAttributes<'div'> {
+  src: string;
+}
+
+const { src, ...props } = Astro.props;
+---
+
+<div
+  class:list={[
+    'relative flex justify-center items-center flex-col',
+    props.class,
+  ]}
+  {...props}>
+  <div
+    class="relative w-full border-[16px] md:border-[24px] lg:border-[28px] border-solid aspect-video rounded-t-2xl border-black">
+    <iframe title="Tim's Experiments" class="w-full aspect-video" src={src}>
+    </iframe>
+  </div>
+  <div
+    class="absolute -top-0 left-0 right-0 h-4 md:h-6 lg:h-7 flex items-center justify-center">
+    <Icon class="h-2 w-2" name="lens" />
+  </div>
+  <div
+    class="w-full md:bg-black flex items-center justify-center h-10 rounded-b-2xl bg-[linear-gradient(to_right,_#A2A3A7,_#DCDEDE)]">
+    <Icon class="text-black h-3/5 w-auto" name="apple-logo" />
+  </div>
+  <Image class="h-auto m-auto w-2/5" src={computerStem} alt="" />
+</div>
