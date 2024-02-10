@@ -1,16 +1,17 @@
 ---
 import {
-  type Width,
+  horizontalAlignmentCss,
   textAlignmentCss,
-  type TextAlignment,
+  type HorizontalAlignment,
   type VerticalAlignment,
-} from './types';
+  type Width,
+} from './util';
 
 type Props = {
   first?: 'left' | 'right';
   align?: VerticalAlignment;
-  leftText?: TextAlignment;
-  rightText?: TextAlignment;
+  leftText?: HorizontalAlignment;
+  rightText?: HorizontalAlignment;
   leftWidth?: Width;
   rightWidth?: Width;
   noSpacing?: true;
@@ -36,6 +37,8 @@ if (align === 'bottom') {
 
 const leftTextCss = textAlignmentCss(leftText);
 const rightTextCss = textAlignmentCss(rightText);
+const leftAlignmentCss = horizontalAlignmentCss(leftText);
+const rightAlignmentCss = horizontalAlignmentCss(rightText);
 const leftWidthCss = `md:w-${leftWidth}`;
 const rightWidthCss = `md:w-${rightWidth}`;
 ---
@@ -48,9 +51,13 @@ const rightWidthCss = `md:w-${rightWidth}`;
     noSpacing ? '' : 'my-16',
   ]}>
   <div class:list={['w-full md:w-1/2', leftTextCss, leftWidthCss]}>
-    <slot />
+    <div class:list={[leftAlignmentCss]}>
+      <slot />
+    </div>
   </div>
-  <div class:list={['w-full md:w-1/2', rightTextCss, rightWidth]}>
-    <slot name="right" />
+  <div class:list={['w-full md:w-1/2', rightTextCss, rightWidthCss]}>
+    <div class:list={[rightAlignmentCss]}>
+      <slot name="right" />
+    </div>
   </div>
 </div>
