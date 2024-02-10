@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+
+type Props = {
+  slug: CollectionEntry<'projects'>['slug'];
+};
+
+const { slug } = Astro.props;
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const projectNames = projects.map((project) => project.slug);
+const currentProject = projectNames.indexOf(slug);
+
+const previousProject =
+  currentProject > 0 ? projectNames[currentProject - 1] : undefined;
+const nextProject =
+  currentProject < projectNames.length - 1
+    ? projectNames[currentProject + 1]
+    : undefined;
+const project = projects[currentProject];
+---
+
+<div
+  class="group nav-parent pointer-events-none md:pointer-events-auto fixed bottom-0 h-40 z-10 w-full">
+  <nav
+    class="rounded-full shadow-lg pointer-events-auto flex gap-4 w-fit mx-auto bg-congress-50 transition-transform ease-linear outline outline-congress-400 px-6 py-3 md:translate-y-[108px]">
+    <a class="text-congress-900 hover:text-congress-950" href="/#hero">
+      Home
+    </a>
+    {
+      previousProject && (
+        <a
+          class="font-medium text-congress-900 hover:text-congress-950"
+          href={`/projects/${previousProject}`}>
+          Previous Project
+        </a>
+      )
+    }
+    <a class="active text-congress-900 hover:text-congress-950" href="#top">
+      {project.data.title}
+    </a>
+    {
+      nextProject && (
+        <a
+          class="font-medium text-congress-900 hover:text-congress-950"
+          href={`/projects/${nextProject}`}>
+          Next Project
+        </a>
+      )
+    }
+  </nav>
+</div>
+
+<style>
+  .nav-parent:hover nav {
+    @apply translate-y-0;
+  }
+
+  .active {
+    @apply font-bold italic text-congress-950;
+  }
+</style>
