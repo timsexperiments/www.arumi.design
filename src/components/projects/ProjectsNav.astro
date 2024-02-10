@@ -36,7 +36,8 @@ const project = projects[currentProject];
         <a
           class="font-medium text-congress-900 hover:text-congress-950"
           href={`/projects/${previousProject}`}>
-          Previous Project
+          <span class="hidden md:block">Previous Project</span>
+          <span class="block md:hidden">Previous</span>
         </a>
       )
     }
@@ -48,7 +49,8 @@ const project = projects[currentProject];
         <a
           class="font-medium text-congress-900 hover:text-congress-950"
           href={`/projects/${nextProject}`}>
-          Next Project
+          <span class="hidden md:block">Next Project</span>
+          <span class="block md:hidden">Next</span>
         </a>
       )
     }
