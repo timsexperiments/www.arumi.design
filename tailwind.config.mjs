@@ -59,7 +59,6 @@ export default {
     require('@tailwindcss/typography'),
     require('tailwindcss-animate'),
     plugin(({ matchUtilities, theme }) => {
-      console.log(theme('transitionDelay'));
       matchUtilities(
         {
           'transition-delay': (value) => ({
