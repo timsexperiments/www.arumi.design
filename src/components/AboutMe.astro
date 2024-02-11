@@ -6,16 +6,16 @@ import headshot from '../assets/headshot.jpg';
 
 <section class="w-full px-4 py-16 sm:px-16" id="about-me">
   <h2
-    class="pb-4 opacity-0 translate-y-[300%] font-display text-3xl"
+    class="translate-y-[300%] pb-4 font-display text-3xl opacity-0"
     data-animate-in>
     About Me
   </h2>
-  <div class="flex flex-col justify-between gap-12 md:gap-6 md:flex-row">
+  <div class="flex flex-col justify-between gap-12 md:flex-row md:gap-6">
     <div
-      class="relative opacity-0 translate-y-1/2 flex justify-center h-full px-9 py-6 md:w-1/2"
+      class="relative flex h-full translate-y-1/2 justify-center px-9 py-6 opacity-0 md:w-1/2"
       data-animate-in>
       <Image
-        class="w-full opacity-100 max-w-96 max-h-96 rounded-full"
+        class="max-h-96 w-full max-w-96 rounded-full opacity-100"
         data-animate-in
         src={headshot}
         width="3000"
@@ -23,12 +23,12 @@ import headshot from '../assets/headshot.jpg';
         alt="Arumi headshot"
         format="webp"
       />
-      <div class="absolute w-full h-full">
-        <Icon class="w-auto h-full m-auto" name="bubbles" />
+      <div class="absolute h-full w-full">
+        <Icon class="m-auto h-full w-auto" name="bubbles" />
       </div>
     </div>
     <div
-      class="flex w-full opacity-0 delay-150 translate-y-1/2 flex-col gap-6 text-base lg:text-lg md:w-1/2"
+      class="flex w-full translate-y-1/2 flex-col gap-6 text-base opacity-0 delay-150 md:w-1/2 lg:text-lg"
       data-animate-in>
       <p>
         🌟 Hi there! I'm Arumi, a vibrant soul with a lifelong flair for
