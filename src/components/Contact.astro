@@ -23,7 +23,8 @@ import { LINKEDIN_URL } from 'src/consts';
     class="mb-8 space-x-4 opacity-0 translate-y-[200%] delay-300"
     data-animate-in>
     <button
-      class="inline-flex items-center justify-center rounded bg-congress-900 px-4 py-2 text-autumn-50 hover:bg-congress-950">
+      class="with-tooltip inline-flex items-center justify-center rounded bg-congress-900 px-4 py-2 text-autumn-50 hover:bg-congress-950"
+      data-button-copy-text="info@arumi.design">
       <Icon class="h-5 w-5" name="mail" />
     </button>
     <a
@@ -34,3 +35,34 @@ import { LINKEDIN_URL } from 'src/consts';
     </a>
   </div>
 </section>
+
+<script>
+  const copyButtons = document.querySelectorAll<HTMLButtonElement>(
+    'button[data-button-copy-text]',
+  );
+  copyButtons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const copyData = button.dataset.buttonCopyText;
+      if (copyData) {
+        console.log('copied the gd text');
+        navigator.clipboard.writeText(copyData);
+
+        button.classList.add('show');
+
+        setTimeout(() => {
+          button.classList.remove('show');
+        }, 5000);
+      }
+    });
+  });
+</script>
+
+<style>
+  .with-tooltip {
+    @apply relative after:absolute after:-top-[120%] after:-z-10 after:w-fit after:text-nowrap after:rounded-md after:border after:border-autumn-300 after:bg-autumn-100 after:p-2 after:text-xs after:text-congress-950 after:opacity-0 after:content-['Email_copied!'];
+  }
+
+  .show {
+    @apply z-0 after:opacity-100;
+  }
+</style>
