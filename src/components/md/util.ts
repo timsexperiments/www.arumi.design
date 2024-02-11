@@ -5,23 +5,32 @@ export type Width =
   | `${number}px`
   | `${number}%`
   | `${number}/${number}`;
+export type MediaPrefix = 'sm' | 'md' | 'lg' | 'xl';
 
-export function textAlignmentCss(alignment: HorizontalAlignment) {
+export function textAlignmentCss(
+  alignment: HorizontalAlignment,
+  prefix: MediaPrefix | undefined = 'md',
+) {
+  const mediaPrefix = prefix ? prefix + ':' : '';
   if (alignment === 'left') {
-    return 'text-left';
+    return `${mediaPrefix}text-left`;
   }
   if (alignment === 'right') {
-    return 'text-right';
+    return `${mediaPrefix}text-right`;
   }
-  return 'text-center';
+  return `${mediaPrefix}text-center`;
 }
 
-export function horizontalAlignmentCss(alignment: HorizontalAlignment) {
+export function horizontalAlignmentCss(
+  alignment: HorizontalAlignment,
+  prefix: MediaPrefix | undefined = 'md',
+) {
+  const mediaPrefix = prefix ? prefix + ':' : '';
   if (alignment === 'left') {
-    return 'float-left';
+    return `${mediaPrefix}:float-left`;
   }
   if (alignment === 'right') {
-    return 'float-right';
+    return `${mediaPrefix}:float-right`;
   }
-  return 'm-auto';
+  return `${mediaPrefix}m-auto`;
 }
