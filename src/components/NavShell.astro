@@ -1,0 +1,17 @@
+---
+
+---
+
+<div
+  class="group nav-parent pointer-events-none md:pointer-events-auto fixed bottom-0 h-40 z-10 w-full">
+  <nav
+    class="rounded-full drop-shadow-lg pointer-events-auto flex gap-4 w-fit mx-auto bg-autumn-200 outline outline-autumn-300 transition-transform ease-linear px-6 py-3 md:translate-y-[108px]">
+    <slot />
+  </nav>
+</div>
+
+<style>
+  .nav-parent:hover nav {
+    @apply translate-y-0;
+  }
+</style>
