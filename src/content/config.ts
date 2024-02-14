@@ -11,6 +11,7 @@ const projects = defineCollection({
     categories: z.string().array().min(1),
     client: z.string().optional(),
     role: z.string(),
+    protected: z.boolean().optional(),
   }),
 });
 
