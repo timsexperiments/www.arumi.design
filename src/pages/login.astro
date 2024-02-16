@@ -5,6 +5,8 @@ import Header from '@components/Header.astro';
 import Squiglies from '@components/Squiglies.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
+export const prerender = false;
+
 if (Astro.request.method.toUpperCase() === 'POST') {
   const body = await Astro.request.formData();
   Astro.cookies.set('PASSWORD', body.get('password') as string);
