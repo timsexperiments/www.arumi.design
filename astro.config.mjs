@@ -9,6 +9,6 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://arumi.design',
   integrations: [mdx(), sitemap(), tailwind(), icon()],
-  output: 'hybrid',
+  output: 'server',
   adapter: cloudflare({ imageService: 'passthrough' }),
 });
