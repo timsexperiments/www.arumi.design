@@ -13,7 +13,5 @@ export default defineConfig({
   image: {
     service: sharpImageService(),
   },
-  adapter: cloudflare({
-    mode: 'directory',
-  }),
+  adapter: cloudflare(),
 });
