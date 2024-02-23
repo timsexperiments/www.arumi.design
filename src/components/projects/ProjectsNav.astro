@@ -2,6 +2,7 @@
 import NavShell from '@components/NavShell.astro';
 import type { CollectionEntry } from 'astro:content';
 import { getCollection } from 'astro:content';
+import { getProjectUrl } from 'src/utils/projects';
 
 type Props = {
   slug: CollectionEntry<'projects'>['slug'];
@@ -17,10 +18,10 @@ const projectNames = projects.map((project) => project.slug);
 const currentProject = projectNames.indexOf(slug);
 
 const previousProject =
-  currentProject > 0 ? projectNames[currentProject - 1] : undefined;
+  currentProject > 0 ? projects[currentProject - 1] : undefined;
 const nextProject =
-  currentProject < projectNames.length - 1
-    ? projectNames[currentProject + 1]
+  currentProject < projects.length - 1
+    ? projects[currentProject + 1]
     : undefined;
 const project = projects[currentProject];
 ---
@@ -31,7 +32,7 @@ const project = projects[currentProject];
     previousProject && (
       <a
         class="font-medium text-congress-900 hover:text-congress-950"
-        href={`/projects/${previousProject}`}>
+        href={getProjectUrl(previousProject)}>
         <span class="hidden md:block">Previous Project</span>
         <span class="block md:hidden">Previous</span>
       </a>
@@ -44,7 +45,7 @@ const project = projects[currentProject];
     nextProject && (
       <a
         class="font-medium text-congress-900 hover:text-congress-950"
-        href={`/projects/${nextProject}`}>
+        href={getProjectUrl(nextProject)}>
         <span class="hidden md:block">Next Project</span>
         <span class="block md:hidden">Next</span>
       </a>

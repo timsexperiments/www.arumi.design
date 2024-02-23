@@ -1,11 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import { type CollectionEntry } from 'astro:content';
+import { getProjectUrl } from 'src/utils/projects';
 import { imagePreview } from '../../images';
 
 type Props = { project: CollectionEntry<'projects'>; delay?: number };
 
 const { project, delay = 0 } = Astro.props;
+
+const projectUrl = getProjectUrl(project);
 ---
 
 <li
@@ -15,7 +18,7 @@ const { project, delay = 0 } = Astro.props;
   data-animate-in-element="projects-list">
   <a
     class="project-preview group flex cursor-pointer flex-col gap-2 hover:text-congress-950"
-    href={`/projects/${project.slug}/`}>
+    href={projectUrl}>
     <div
       class="relative overflow-clip rounded-2xl border border-congress-400 bg-congress-50">
       <Image

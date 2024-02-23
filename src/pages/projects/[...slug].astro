@@ -1,26 +1,21 @@
 ---
 import Project from '@layouts/Project.astro';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 
-export const prerender = false;
+export const prerender = true;
 
-const passwordCookie = Astro.cookies.get('PASSWORD');
-const SECRET_PASSWORD = import.meta.env.PROTECTED_ARTICLE_PASSWORD;
-const projects = await getCollection('projects');
-
-const { slug } = Astro.params;
-const project = projects.find((project) => project.slug === slug);
-if (!project) return Astro.redirect('/404');
-if (project.data.protected && passwordCookie?.value !== SECRET_PASSWORD) {
-  const params = new URLSearchParams();
-  params.append('source', new URL(Astro.request.url).pathname);
-  if (passwordCookie?.value) {
-    params.append('wrong', 'true');
-  }
-  const pathParts = ['/login', params.toString()];
-  return Astro.redirect(pathParts.join('?'));
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects
+    .map((project) => ({
+      params: { slug: project.slug },
+      props: project,
+    }))
+    .filter((project) => !project.props.data.protected);
 }
+type Props = CollectionEntry<'projects'>;
 
+const project = Astro.props;
 const { Content } = await project.render();
 ---
 
