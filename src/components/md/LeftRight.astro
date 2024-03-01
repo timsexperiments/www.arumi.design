@@ -22,8 +22,8 @@ const {
   align = 'top',
   leftText = 'left',
   rightText = 'right',
-  rightWidth = '1/2',
-  leftWidth = '1/2',
+  rightWidth = 'md:w-1/2',
+  leftWidth = 'md:w-1/2',
   noSpacing = false,
 } = Astro.props;
 
@@ -39,8 +39,8 @@ const leftTextCss = textAlignmentCss(leftText);
 const rightTextCss = textAlignmentCss(rightText);
 const leftAlignmentCss = horizontalAlignmentCss(leftText);
 const rightAlignmentCss = horizontalAlignmentCss(rightText);
-const leftWidthCss = `md:w-${leftWidth}`;
-const rightWidthCss = `md:w-${rightWidth}`;
+const leftWidthCss = leftWidth;
+const rightWidthCss = rightWidth;
 ---
 
 <div
@@ -50,12 +50,12 @@ const rightWidthCss = `md:w-${rightWidth}`;
     alignCss,
     noSpacing ? '' : 'my-16',
   ]}>
-  <div class:list={['w-full md:w-1/2', leftTextCss, leftWidthCss]}>
+  <div class:list={['w-full', leftTextCss, leftWidthCss]}>
     <div class:list={[leftAlignmentCss]}>
       <slot />
     </div>
   </div>
-  <div class:list={['w-full md:w-1/2', rightTextCss, rightWidthCss]}>
+  <div class:list={['w-full', rightTextCss, rightWidthCss]}>
     <div class:list={[rightAlignmentCss]}>
       <slot name="right" />
     </div>
