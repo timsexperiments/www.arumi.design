@@ -9,7 +9,6 @@ categories: ['Product Design', 'UX Research']
 
 import bhDashboardDashboardImagePng from '@assets/bh-dashboard/dashboard-image.png';
 import bhDashboardGoogleAnalyticsPng from '@assets/bh-dashboard/google-analytics.png';
-import bhDashboardHeuristicPng from '@assets/bh-dashboard/heuristic-evaluation.png';
 import bhDashboardKpisPng from '@assets/bh-dashboard/kpis.png';
 import LeftHeader from '@md/LeftHeader.astro';
 import LeftRight from '@md/LeftRight.astro';
@@ -54,47 +53,31 @@ import { Image } from 'astro:assets';
 
 ## Let's explore the insights
 
-<LeftRight align="middle">
-    ### Evaluation of Current Dashboard
+### User Research with Google Analytics
 
-    A comprehensive evaluation was carried out to understand the strengths and weaknesses of the existing engageSubsea platform. The evaluation focused on identifying the most frequently used modules by different user types or companies. By analyzing the Google Analytics report, it was possible to determine which modules were accessed the most and the specific events within those modules that were most commonly utilized. This analysis provided insights into user preferences, usage patterns, and areas that required improvement.
+I began my user research by conducting a comprehensive evaluation of the current engageSubsea platform dashboard, leveraging Google Analytics to collect detailed data on user interactions and behavior. This analysis was aimed at identifying the modules and specific events within those modules that were most frequently used by different user types or companies. By examining metrics such as module usage, event frequency, and navigation paths, I gained valuable insights into user preferences, usage patterns, and areas that required improvement. These insights were instrumental in shaping my design decisions for the post-login page or dashboard, ensuring that the most relevant and commonly accessed information was prominently featured to tailor the user experience to meet the identified needs and priorities.
 
-    <Image
-        slot="right"
-        class="max-w-full h-auto w-auto"
-        format="webp"
-        src={bhDashboardHeuristicPng}
-        alt="Heuristic evaluation" />
+<Image
+  class="m-auto h-auto w-auto max-w-4xl"
+  format="webp"
+  src={bhDashboardGoogleAnalyticsPng}
+  alt="Dashboard analytics"
+/>
 
-</LeftRight>
+<div class="py-2" />
 
-<LeftRight align="middle" first="right">
-    <Image
-        class="max-w-full h-auto w-auto"
-        format="webp"
-        src={bhDashboardGoogleAnalyticsPng}
-        alt="Dashboard analytics" />
-    <div slot="right">
-        ### User Research with Google Analytics
+### Identification of KPI's
 
-        Utilizing the available Google Analytics report, an in-depth examination of user behavior and interactions within the engageSubsea platform was performed. By studying metrics such as module usage, event frequency, and navigation paths, valuable insights were gained regarding user preferences and priorities. These insights helped shape the design decisions for the post-login page or dashboard, ensuring that the most relevant and commonly accessed information was prominently featured.
-    </div>
+As part of the research process, various designs were explored to effectively display Key Performance Indicators (KPIs) within the redesigned engageSubsea dashboard. The new & improved design incorporates KPIs along with status colors, accompanying status messages that provide clear meaning to the users. Additionally, the importance of each KPI is marked, indicating the priority from highest to lowest, ensuring users can easily interpret and prioritize the information displayed in the dashboard. This approach enhances the accessibility and usability of the dashboard, enabling users to quickly grasp the status, significance, and relative importance of the KPIs at a glance.
 
-</LeftRight>
+<Image
+  class="m-auto h-auto w-auto max-w-full"
+  format="webp"
+  src={bhDashboardKpisPng}
+  alt="KPIs"
+/>
 
-<LeftRight align="middle">
-    ### Identification of KPI's
-
-    As part of the research process, various designs were explored to effectively display Key Performance Indicators (KPIs) within the redesigned engageSubsea dashboard. The new & improved design incorporates KPIs along with status colors, accompanying status messages that provide clear meaning to the users. Additionally, the importance of each KPI is marked, indicating the priority from highest to lowest, ensuring users can easily interpret and prioritize the information displayed in the dashboard. This approach enhances the accessibility and usability of the dashboard, enabling users to quickly grasp the status, significance, and relative importance of the KPIs at a glance.
-
-    <Image
-        slot="right"
-        class="max-w-full h-auto w-auto"
-        format="webp"
-        src={bhDashboardKpisPng}
-        alt="KPIs" />
-
-</LeftRight>
+<div class="py-4" />
 
 ## Design Achievements & Milestones
 
@@ -106,8 +89,6 @@ import { Image } from 'astro:assets';
 - The dashboard's UI featured critical data at the top and supplementary information in a hierarchical layout, using charts, graphs, and data cards for clarity and quick decision-making
 - Active usability testing with stakeholders & users informed iterative design improvements, optimizing the dashboard for a user-friendly interface
 - Research insights were transformed into design actions, resulting in an efficient post-login page that enhances user experience and operational efficiency.
-
-<div class="my-32"></div>
 
 <Image
   class="m-auto h-auto max-h-dvh w-auto max-w-full shadow-lg"
