@@ -3,5 +3,10 @@
 @tailwind utilities;
 
 :root {
-  @apply w-screen scroll-smooth bg-autumn-50 font-serif text-congress-900;
+  @apply font-sans w-screen scroll-smooth bg-autumn-50 text-congress-900;
+}
+
+button,
+a {
+  @apply !font-serif;
 }
