@@ -22,7 +22,7 @@ const wrong = Astro.url.searchParams.get('wrong') === 'true';
 z;
 const slug = (source ?? '')
   .split('/')
-  .slice(-1)[0] as unknown as CollectionEntry<'projects'>;
+  .slice(-1)[0] as CollectionEntry<'projects'>['slug'];
 ---
 
 <!doctype html>
