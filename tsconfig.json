@@ -9,7 +9,8 @@
       "@md/*": ["src/components/md/*"],
       "@layouts/*": ["src/layouts/*"],
       "@scripts/*": ["src/scripts/*"],
-      "@utils/*": ["src/scripts/*"]
+      "@utils/*": ["src/scripts/*"],
+      "@consts": ["src/consts.ts"]
     }
   }
 }

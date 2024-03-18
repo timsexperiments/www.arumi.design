@@ -2,8 +2,11 @@
 import BaseHead from '@components/BaseHead.astro';
 import Footer from '@components/Footer.astro';
 import Header from '@components/Header.astro';
+import ProjectsNav from '@components/projects/ProjectsNav.astro';
 import Squiglies from '@components/Squiglies.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@consts';
+import type { CollectionEntry } from 'astro:content';
+import { z } from 'astro:content';
 
 export const prerender = false;
 
@@ -16,8 +19,10 @@ if (Astro.request.method.toUpperCase() === 'POST') {
 
 const source = Astro.url.searchParams.get('source');
 const wrong = Astro.url.searchParams.get('wrong') === 'true';
-console.log(source);
-console.log(wrong);
+z;
+const slug = (source ?? '')
+  .split('/')
+  .slice(-1)[0] as unknown as CollectionEntry<'projects'>;
 ---
 
 <!doctype html>
@@ -29,7 +34,8 @@ console.log(wrong);
     <header>
       <Header />
     </header>
-    <main class="flex w-screen flex-col items-center gap-4 pt-60">
+    <main
+      class="flex w-screen flex-col items-center gap-4 px-4 pt-24 md:px-0 md:pt-60">
       <div class="max-w-2xl space-y-4">
         <h1 class="text-2xl font-bold text-congress-950">
           This project is confidential
@@ -60,6 +66,7 @@ console.log(wrong);
         </form>
         {wrong && <p class="text-autumn-700">Wrong password!</p>}
       </div>
+      <ProjectsNav slug={slug} />
     </main>
     <footer class="fixed bottom-0 w-full">
       <Footer />
