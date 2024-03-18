@@ -27,7 +27,7 @@ const { title, description, role, client, slug } = Astro.props;
     <main class="w-full px-4 sm:px-16 md:px-32">
       <h1
         id="top"
-        class="mb-2 translate-y-[200%] text-4xl font-extrabold text-congress-950 opacity-0 md:text-5xl"
+        class="mb-2 translate-y-[200%] font-serif text-4xl font-bold text-congress-950 opacity-0 md:text-5xl"
         data-animate-in>
         {title}
       </h1>
@@ -59,7 +59,7 @@ const { title, description, role, client, slug } = Astro.props;
     <ProjectsNav slug={slug} />
     <style is:global>
       .prose-custom {
-        @apply prose-headings:text-congress-950 prose-p:text-congress-900 prose-strong:text-congress-900 prose-ul:text-congress-900 prose-li:my-0 prose-li:marker:text-congress-900 prose-hr:my-16 prose-hr:border-t-2 prose-hr:border-congress-950 md:prose-h2:text-3xl;
+        @apply prose-headings:font-serif prose-headings:text-congress-950 prose-h1:font-display prose-h1:font-bold prose-p:text-congress-900 prose-strong:text-congress-900 prose-ul:text-congress-900 prose-li:my-0 prose-li:marker:text-congress-900 prose-hr:my-16 prose-hr:border-t-2 prose-hr:border-congress-950 md:prose-h2:text-3xl;
       }
     </style>
   </body>
