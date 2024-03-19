@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  @apply font-sans w-screen scroll-smooth bg-autumn-50 text-congress-900;
+  @apply w-screen scroll-smooth bg-autumn-50 font-sans text-congress-900;
 }
 
 button,
@@ -11,14 +11,19 @@ a {
   @apply font-serif;
 }
 
-h1,
-h2 {
+h1 {
   @apply font-display;
 }
 
+h2,
 h3,
 h4,
 h5,
 h6 {
   @apply font-serif;
+}
+
+h2,
+h3 {
+  @apply font-bold;
 }
