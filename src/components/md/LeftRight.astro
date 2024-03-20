@@ -15,6 +15,7 @@ type Props = {
   leftWidth?: Width;
   rightWidth?: Width;
   noSpacing?: true;
+  class?: string;
 };
 
 const {
@@ -25,6 +26,7 @@ const {
   rightWidth = 'md:w-1/2',
   leftWidth = 'md:w-1/2',
   noSpacing = false,
+  class: classes = '',
 } = Astro.props;
 
 let alignCss = 'items-start';
@@ -49,6 +51,7 @@ const rightWidthCss = rightWidth;
     first === 'left' ? 'flex-col' : 'flex-col-reverse',
     alignCss,
     noSpacing ? '' : 'my-16',
+    classes,
   ]}>
   <div class:list={['w-full', leftTextCss, leftWidthCss]}>
     <div class:list={[leftAlignmentCss]}>

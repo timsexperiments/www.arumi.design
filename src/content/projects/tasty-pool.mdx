@@ -7,10 +7,11 @@ role: 'Product Designer'
 categories: ['Product Design', 'UX Research']
 ---
 
-import moodBoardWebp from '@assets/tasty-pool/mood-board.webp';
+import moodBoardWebp from '@assets/tasty-pool/moodboard.webp';
 import siteMapWebp from '@assets/tasty-pool/site-map.webp';
 import wireframesWebp from '@assets/tasty-pool/wireframes.webp';
 import LeftHeader from '@md/LeftHeader.astro';
+import LeftRight from '@md/LeftRight.astro';
 import MyImpact from '@md/MyImpact.astro';
 import { Image } from 'astro:assets';
 
@@ -57,9 +58,11 @@ import { Image } from 'astro:assets';
 
 ## Let's explore the insights
 
-### User Research with Google Analytics
+### Moodboard Concepts & Selection
 
-I began my user research by conducting a comprehensive evaluation of the current engageSubsea platform dashboard, leveraging Google Analytics to collect detailed data on user interactions and behavior. This analysis was aimed at identifying the modules and specific events within those modules that were most frequently used by different user types or companies. By examining metrics such as module usage, event frequency, and navigation paths, I gained valuable insights into user preferences, usage patterns, and areas that required improvement. These insights were instrumental in shaping my design decisions for the post-login page or dashboard, ensuring that the most relevant and commonly accessed information was prominently featured to tailor the user experience to meet the identified needs and priorities.
+In the early stages of conceptualizing Tasty Pool, I created a mood board that served as a visual foundation for the app's aesthetic and emotional appeal. Central to this mood board were the chosen color palettes, carefully selected to embody the warmth, energy, and community spirit of Tasty Pool.
+
+The choice of vibrant red and soft peach colors was key to creating a design that mixes excitement with comfort, showing the lively yet inviting spirit of the culinary community. We paired these colors with Proxima Nova typography for its clear and modern look, making sure the app speaks to users in an approachable yet refined way. This mood board not only guided the visual direction of Tasty Pool but also served as a constant reference throughout the design process, ensuring every element aligns with the initial vision of a cohesive, user-centered experience. Through this deliberate combination of colors and typography, the mood board laid the groundwork for a platform that invites users to explore, share, and connect over their love for food, fostering a sense of belonging and engagement within the Tasty Pool community.
 
 <Image
   class="m-auto h-auto w-auto max-w-full"
@@ -99,13 +102,21 @@ By developing these wireframes, I aimed to create an intuitive and user-friendly
 
 <div class="py-4" />
 
-## Interactive Prototype Showcase
+<LeftRight class="mt-0">
+  <div>
+    <h2 class="mt-24">Interactive Prototype Showcase</h2>
 
-Experience Tasty Pool in action and witness the seamless blend of design and functionality. My Figma prototype brings the concept to life, allowing you to navigate through the app as if it were fully developed. From the vibrant interface to the intuitive user journey, explore how each element has been meticulously crafted for culinary enthusiasts to share, discover, and engage with recipes. Dive into the prototype and see firsthand the attention to detail and user-centric design principles that define Tasty Pool.
+    In the early stages of conceptualizing Tasty Pool, I created a mood board that served as a visual foundation for the app's aesthetic and emotional appeal. Central to this mood board were the chosen color palettes, carefully selected to embody the warmth, energy, and community spirit of Tasty Pool.
 
-<iframe
-  class="m-auto aspect-[19.5_/_9]"
-  width="393"
-  height="852"
-  src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fk45a5K7BgWgChs1zJXUYDn%2FTasty-Pool%3Ftype%3Ddesign%26node-id%3D64-16309%26t%3D0nOH0qqVtoSxHPR3-1%26scaling%3Dscale-down%26page-id%3D0%253A4%26starting-point-node-id%3D64%253A16309%26mode%3Ddesign"
-  allowfullscreen></iframe>
+    The choice of vibrant red and soft peach colors was key to creating a design that mixes excitement with comfort, showing the lively yet inviting spirit of the culinary community. We paired these colors with Proxima Nova typography for its clear and modern look, making sure the app speaks to users in an approachable yet refined way. This mood board not only guided the visual direction of Tasty Pool but also served as a constant reference throughout the design process, ensuring every element aligns with the initial vision of a cohesive, user-centered experience. Through this deliberate combination of colors and typography, the mood board laid the groundwork for a platform that invites users to explore, share, and connect over their love for food, fostering a sense of belonging and engagement within the Tasty Pool community.
+
+  </div>
+
+  <iframe
+    slot="right"
+    class="m-auto aspect-[19.5_/_9]"
+    width="393"
+    height="852"
+    src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fk45a5K7BgWgChs1zJXUYDn%2FTasty-Pool%3Ftype%3Ddesign%26node-id%3D64-16309%26t%3D0nOH0qqVtoSxHPR3-1%26scaling%3Dscale-down%26page-id%3D0%253A4%26starting-point-node-id%3D64%253A16309%26mode%3Ddesign"
+    allowfullscreen></iframe>
+</LeftRight>
